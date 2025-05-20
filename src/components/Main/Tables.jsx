@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import toast from "react-hot-toast";
 import { FaHeart } from "react-icons/fa";
-import { toast } from "react-hot-toast";
-const Tables = ({ tab }) => {
-     const [liked,setLiked] = useState(false)
-  const handleClicked =() =>{
+import Card from "./Card";
+import { FcCheckmark } from "react-icons/fc";
+
+const Tables = ({ tab, handldAdd }) => {
+  const [liked, setLiked] = useState(false);
+  const handleClicked = () => {
     setLiked(true);
-    toast.success("Added to favorites! ❤️");
-  }
+    toast.custom(
+      <div className="bg-white px-4 py-2 rounded shadow-md flex items-center gap-2">
+        <FcCheckmark size={20} />
+        <span>Item Added to your Favorite Lists</span>
+      </div>
+    );
+  };
   return (
     <tbody className=" border-t-2 border-[#e7eaf0]">
       {/* row 1 */}
@@ -18,11 +26,20 @@ const Tables = ({ tab }) => {
         <td>${tab.currentBidPrice}</td>
         <td className="text-xs ">{tab.timeLeft}</td>
         <td className=" pl-7">
-          <FaHeart
-            onClick={() => handleClicked()}
-            className={`${liked?'text-red-600 cursor-not-allowed opacity-100':'text-gray-300 hover:scale-110'}`}
-            size={20}
-          />
+          <button
+            onClick={() => {
+              handleClicked();
+              handldAdd(tab);
+            }}
+            className={`relative p-2 rounded transition duration-300 ${
+              liked ? "cursor-not-allowed" : "hover:scale-110"
+            }`}
+          >
+            <FaHeart
+              className={liked ? "text-red-500" : "text-gray-400"}
+              size={20}
+            />
+          </button>
         </td>
       </tr>
     </tbody>

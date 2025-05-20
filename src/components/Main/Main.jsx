@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Tables from "./Tables";
 
-const Main = () => {
+const Main = ({ handldAdd }) => {
   const [table, setTable] = useState([]);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ const Main = () => {
 
   console.log(table);
   return (
-    <div> 
+    <div>
       <div className="shadow-2xl bg-white rounded-2xl">
         <table className="table ">
           {/* head */}
@@ -25,7 +25,7 @@ const Main = () => {
             </tr>
           </thead>
           {table.map((tab) => (
-            <Tables tab={tab}></Tables>
+            <Tables handldAdd={handldAdd} tab={tab}></Tables>
           ))}
         </table>
       </div>

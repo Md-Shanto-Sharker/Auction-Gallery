@@ -1,4 +1,3 @@
-
 import { Toaster } from "react-hot-toast";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
@@ -6,12 +5,17 @@ import Hero from "./components/Hero/Hero";
 import Card from "./components/Main/Card";
 import Main from "./components/Main/Main";
 import Navbar from "./components/Navbar/Navbar";
+import { useState } from "react";
 
 function App() {
- 
+  const [likedItems, setLikedItems] = useState([]);
+  const handldAdd = (likedItem) => {
+    const newArray = [...likedItems, likedItem];
+    setLikedItems(newArray);
+  };
   return (
     <>
-    <Toaster position="top-right"></Toaster>
+      <Toaster position="right-top"></Toaster>
       <header>
         <Navbar></Navbar>
         <Hero></Hero>
@@ -31,15 +35,15 @@ function App() {
 
           {/* Tables */}
           <div className="main-container flex justify-center gap-20">
-            {/* Left container */} 
+            {/* Left container */}
 
             <div className="left-container w-[70%] text-center">
-              <Main></Main>
+              <Main handldAdd={handldAdd}></Main>
             </div>
 
             {/* right container */}
             <div className="right-container w-[30%] text-center">
-              <Card></Card>
+              <Card likedItems={likedItems}></Card>
             </div>
           </div>
         </div>
