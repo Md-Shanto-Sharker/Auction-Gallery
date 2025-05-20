@@ -1,0 +1,66 @@
+[
+    {
+      "id": 1,
+      "title": "Vintage Leica M3 Camera",
+      "description": "Brand new iPhone 14 Pro with 128GB storage.",
+      "currentBidPrice": 2850,
+      "timeLeft": "2 Days left",
+      "bidsCount": 12,
+      "image": "https://i.ibb.co.com/hbg3GRD/Bid1-min.png"
+    },
+    {
+      "id": 2,
+      "title": "1965 Gibson SG Standard Electric Guitar",
+      "description": "High-performance gaming laptop with RTX 4060 GPU.",
+      "currentBidPrice": 2850,
+      "timeLeft": "2 Days left",
+      "bidsCount": 8,
+      "image": "https://i.ibb.co.com/Hpqs4Wdb/Bid2-min.png"
+    },
+    {
+      "id": 3,
+      "title": "Original Apple Macintosh 128K (1984)",
+      "description": "Stainless steel case with sport band.",
+      "currentBidPrice": 2850,
+      "timeLeft": "2 Days left",
+      "bidsCount": 17,
+      "image": "https://i.ibb.co.com/7dmPSfdv/Bid3-min.png"
+    },
+    {
+      "id": 4,
+      "title": "Rolex Submariner 16610",
+      "description": "Noise-canceling over-ear headphones.",
+      "currentBidPrice": 2850,
+      "timeLeft": "2 Days left",
+      "bidsCount": 6,
+      "image": "https://i.ibb.co.com/YBDM1XMz/Bid4-min.png"
+    },
+    {
+      "id": 5,
+      "title": "First Edition 'The Great Gatsby' by F. Scott Fitzgerald",
+      "description": "Mirrorless camera with 15-45mm lens.",
+      "currentBidPrice": 2850,
+      "timeLeft": "2 Days left",
+      "bidsCount": 10,
+      "image": "https://i.ibb.co.com/5g0fcc9S/Bid5-min.png"
+    },
+    {
+      "id": 6,
+      "title": "Mid-Century Modern Eames Lounge Chair",
+      "description": "4K Ultra HD Smart TV with voice control.",
+      "currentBidPrice": 2850,
+      "timeLeft": "2 Days left",
+      "bidsCount": 14,
+      "image": "https://i.ibb.co.com/sdDt6Zz6/Bid6-min.png"
+    },
+    {
+        "id": 7,
+        "title": "PS5 Console Bundle",
+        "description": "Banksy Original Screen Print",
+        "currentBidPrice": 2850,
+        "timeLeft": "2 Days left",
+        "bidsCount": 20,
+        "image": "https://i.ibb.co.com/Y7LXPBLn/Bid7-min.png"
+      }
+  ]
+  
