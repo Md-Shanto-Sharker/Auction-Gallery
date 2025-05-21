@@ -1,7 +1,8 @@
 import React from "react";
 import { FaRegHeart } from "react-icons/fa";
+import { RxCross2 } from "react-icons/rx";
 
-const Card = ({ likedItems }) => {
+const Card = ({ likedItems, handleRemove }) => {
   return (
     <div>
       <div className="card bg-base-100 w-96 shadow-sm">
@@ -39,6 +40,14 @@ const Card = ({ likedItems }) => {
                       <p className="font-bold">{liked.title}</p>
                       <p className="font-bold">${liked.currentBidPrice}</p>
                       <p className="font-bold">{liked.bidsCount}</p>
+                    </div>
+                    <div className="flex  items-center">
+                      <button
+                        onClick={() => handleRemove(liked.id)}
+                        className="hover:bg-red-600 hover:text-white"
+                      >
+                        <RxCross2 size={30} />
+                      </button>
                     </div>
                   </div>
                 </p>

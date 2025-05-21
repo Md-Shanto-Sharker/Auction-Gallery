@@ -1,4 +1,4 @@
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
@@ -12,6 +12,12 @@ function App() {
   const handldAdd = (likedItem) => {
     const newArray = [...likedItems, likedItem];
     setLikedItems(newArray);
+  };
+
+  const handleRemove = (id) => {
+    const remainingBookMark = likedItems.filter((like) => like.id !== id);
+    setLikedItems(remainingBookMark);
+    toast.success("Item Remove  for favorite items");
   };
   return (
     <>
@@ -38,12 +44,12 @@ function App() {
             {/* Left container */}
 
             <div className="left-container w-[70%] text-center">
-              <Main handldAdd={handldAdd}></Main>
+              <Main handldAdd={handldAdd} handleRemove={handleRemove}></Main>
             </div>
 
             {/* right container */}
             <div className="right-container w-[30%] text-center">
-              <Card likedItems={likedItems}></Card>
+              <Card likedItems={likedItems} handleRemove={handleRemove}></Card>
             </div>
           </div>
         </div>
